@@ -143,10 +143,10 @@ public class Divisao extends javax.swing.JFrame {
         int n2 = (int) (lblDenom.getValue());
         
         float divisao = n1/n2;
-        float resto = (float) Math.sqrt(n1);
+        float raiz = (float) Math.sqrt(n1);
         
         txtDivisao.setText(Float.toString( divisao));
-        txtRaiz.setText(Float.toString( resto));
+        txtRaiz.setText(Float.toString( raiz));
     }//GEN-LAST:event_btnDividirActionPerformed
 
     /**
