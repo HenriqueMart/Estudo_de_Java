@@ -35,7 +35,7 @@ public class Divisao extends javax.swing.JFrame {
         txtn3 = new javax.swing.JLabel();
         txtn4 = new javax.swing.JLabel();
         txtDivisao = new javax.swing.JLabel();
-        txtResto = new javax.swing.JLabel();
+        txtRaiz = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridBagLayout());
@@ -80,7 +80,7 @@ public class Divisao extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(22, 6, 0, 39);
         getContentPane().add(lblDenom, gridBagConstraints);
 
-        btnDividir.setText("Dividir");
+        btnDividir.setText("CALCULAR");
         btnDividir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDividirActionPerformed(evt);
@@ -94,7 +94,7 @@ public class Divisao extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(18, 5, 0, 0);
         getContentPane().add(btnDividir, gridBagConstraints);
 
-        txtn3.setText("Divisao");
+        txtn3.setText("DIVISÃO");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
@@ -103,7 +103,7 @@ public class Divisao extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(34, 77, 0, 0);
         getContentPane().add(txtn3, gridBagConstraints);
 
-        txtn4.setText("Resto");
+        txtn4.setText("RAIZ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
@@ -122,7 +122,7 @@ public class Divisao extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(26, 29, 0, 0);
         getContentPane().add(txtDivisao, gridBagConstraints);
 
-        txtResto.setText("0");
+        txtRaiz.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
         gridBagConstraints.gridy = 7;
@@ -131,7 +131,7 @@ public class Divisao extends javax.swing.JFrame {
         gridBagConstraints.ipady = 16;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(25, 29, 24, 0);
-        getContentPane().add(txtResto, gridBagConstraints);
+        getContentPane().add(txtRaiz, gridBagConstraints);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -143,10 +143,10 @@ public class Divisao extends javax.swing.JFrame {
         int n2 = (int) (lblDenom.getValue());
         
         float divisao = n1/n2;
-        float resto = n1%n2;
+        float resto = (float) Math.sqrt(n1);
         
         txtDivisao.setText(Float.toString( divisao));
-        txtResto.setText(Float.toString( resto));
+        txtRaiz.setText(Float.toString( resto));
     }//GEN-LAST:event_btnDividirActionPerformed
 
     /**
@@ -190,7 +190,7 @@ public class Divisao extends javax.swing.JFrame {
     private javax.swing.JSpinner lblDenom;
     private javax.swing.JSpinner lblNum;
     private javax.swing.JLabel txtDivisao;
-    private javax.swing.JLabel txtResto;
+    private javax.swing.JLabel txtRaiz;
     private javax.swing.JLabel txtn1;
     private javax.swing.JLabel txtn2;
     private javax.swing.JLabel txtn3;
