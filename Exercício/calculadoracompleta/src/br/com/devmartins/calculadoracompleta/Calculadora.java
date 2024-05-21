@@ -9,12 +9,12 @@ package br.com.devmartins.calculadoracompleta;
  * @author hmart
  */
 public class Calculadora extends javax.swing.JFrame {
-
     /**
      * Creates new form NewJFrame
      */
     public Calculadora() {
         initComponents();
+        panCalc.setVisible(false);
     }
 
     /**
@@ -25,60 +25,199 @@ public class Calculadora extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
-        jLabel1 = new javax.swing.JLabel();
+        txtN0 = new javax.swing.JLabel();
         lblValor = new javax.swing.JSpinner();
         btnCal = new javax.swing.JButton();
+        panCalc = new javax.swing.JPanel();
         txtResto = new javax.swing.JLabel();
+        txtn1 = new javax.swing.JLabel();
+        txtN2 = new javax.swing.JLabel();
+        txtElevado = new javax.swing.JLabel();
+        txtN3 = new javax.swing.JLabel();
+        txtQuadrada = new javax.swing.JLabel();
+        txtN5 = new javax.swing.JLabel();
+        txtN4 = new javax.swing.JLabel();
+        txtCubica = new javax.swing.JLabel();
+        txtAbsoluta = new javax.swing.JLabel();
+        txtIcon = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+        getContentPane().setLayout(new java.awt.GridBagLayout());
 
-        jLabel1.setText("informe um valor");
+        txtN0.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtN0.setText("informe um valor");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(34, 65, 0, 0);
+        getContentPane().add(txtN0, gridBagConstraints);
 
+        lblValor.setModel(new javax.swing.SpinnerNumberModel(1, -50, 50, 1));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(34, 66, 0, 0);
+        getContentPane().add(lblValor, gridBagConstraints);
+
+        btnCal.setIcon(new javax.swing.ImageIcon("C:\\Users\\hmart\\Desktop\\ESTUDO PROGRAMAÇÃO\\Java\\Exercício\\calculadoracompleta\\src\\br\\com\\devmartins\\imagem\\calculadora (1).png")); // NOI18N
         btnCal.setText("Calcular");
         btnCal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCalActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 165, 0, 0);
+        getContentPane().add(btnCal, gridBagConstraints);
 
+        txtResto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtResto.setForeground(new java.awt.Color(153, 153, 153));
         txtResto.setText("0");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addComponent(jLabel1)
-                .addGap(12, 12, 12)
-                .addComponent(lblValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtResto)
-                    .addComponent(btnCal))
-                .addContainerGap(89, Short.MAX_VALUE))
+        txtn1.setText("Resto da Divisão por 2");
+
+        txtN2.setText("Elevado ao Cubo");
+
+        txtElevado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtElevado.setForeground(new java.awt.Color(153, 153, 153));
+        txtElevado.setText("0");
+
+        txtN3.setText("Raiz Quadrada");
+
+        txtQuadrada.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtQuadrada.setForeground(new java.awt.Color(153, 153, 153));
+        txtQuadrada.setText("0");
+
+        txtN5.setText("Valor Absoluto");
+
+        txtN4.setText("Raiz Cubica");
+
+        txtCubica.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtCubica.setForeground(new java.awt.Color(153, 153, 153));
+        txtCubica.setText("0");
+
+        txtAbsoluta.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtAbsoluta.setForeground(new java.awt.Color(153, 153, 153));
+        txtAbsoluta.setText("0");
+
+        javax.swing.GroupLayout panCalcLayout = new javax.swing.GroupLayout(panCalc);
+        panCalc.setLayout(panCalcLayout);
+        panCalcLayout.setHorizontalGroup(
+            panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panCalcLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtn1)
+                    .addComponent(txtN2)
+                    .addComponent(txtN3)
+                    .addComponent(txtN5)
+                    .addComponent(txtN4))
+                .addGap(31, 31, 31)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtQuadrada, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                    .addComponent(txtElevado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtResto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtCubica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtAbsoluta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(51, 51, 51))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(lblValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCal))
-                .addGap(53, 53, 53)
-                .addComponent(txtResto)
-                .addContainerGap(174, Short.MAX_VALUE))
+        panCalcLayout.setVerticalGroup(
+            panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panCalcLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtn1)
+                    .addComponent(txtResto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panCalcLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(txtN2)
+                        .addGap(33, 33, 33)
+                        .addComponent(txtN3))
+                    .addGroup(panCalcLayout.createSequentialGroup()
+                        .addComponent(txtElevado, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtQuadrada, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtCubica, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtN4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtAbsoluta, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtN5)))))
         );
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 40;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(17, 6, 17, 0);
+        getContentPane().add(panCalc, gridBagConstraints);
+
+        txtIcon.setIcon(new javax.swing.ImageIcon("C:\\Users\\hmart\\Desktop\\ESTUDO PROGRAMAÇÃO\\Java\\Exercício\\calculadoracompleta\\src\\br\\com\\devmartins\\imagem\\calculadora.png")); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.ipady = 25;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(48, 6, 0, 6);
+        getContentPane().add(txtIcon, gridBagConstraints);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setText("Calculadora Automática");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 111, 0, 0);
+        getContentPane().add(jLabel1, gridBagConstraints);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalActionPerformed
         // TODO add your handling code here:
-        float valor = (Float)lblValor.getValue();
-        txtResto.setText(Float.toString( valor));
+        panCalc.setVisible(true);
+        int num = Integer.parseInt(lblValor.getValue().toString());
+        
+        //Resto da divisão por 2
+        double resto = num % 2;
+        txtResto.setText(Double.toString(resto));
+        
+        //Elevado ao cubo
+        double elevado = (double) (Math.pow(num, 3));
+        txtElevado.setText(Double.toString(elevado));
+        
+        //Raiz Quadrada
+        double raiz = (double) (Math.sqrt(num));
+        txtQuadrada.setText(Double.toString(raiz));
+        
+        //Raiz Cúbica
+        double cubo = (double) (Math.cbrt(num));
+        txtCubica.setText(Double.toString(cubo));
+        
+        //Valor Absoluto
+        double absoluto = (double) (Math.abs(num));
+        txtAbsoluta.setText(Double.toString(absoluto));
     }//GEN-LAST:event_btnCalActionPerformed
 
     /**
@@ -121,6 +260,18 @@ public class Calculadora extends javax.swing.JFrame {
     private javax.swing.JButton btnCal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JSpinner lblValor;
+    private javax.swing.JPanel panCalc;
+    private javax.swing.JLabel txtAbsoluta;
+    private javax.swing.JLabel txtCubica;
+    private javax.swing.JLabel txtElevado;
+    private javax.swing.JLabel txtIcon;
+    private javax.swing.JLabel txtN0;
+    private javax.swing.JLabel txtN2;
+    private javax.swing.JLabel txtN3;
+    private javax.swing.JLabel txtN4;
+    private javax.swing.JLabel txtN5;
+    private javax.swing.JLabel txtQuadrada;
     private javax.swing.JLabel txtResto;
+    private javax.swing.JLabel txtn1;
     // End of variables declaration//GEN-END:variables
 }
