@@ -20,6 +20,11 @@ public class Aula08 {
         n2 = 8;
         r = (n1>n2)?n1+n2:n2-n1;
         System.out.println(r);
+        
+        String nome = "Gustavo";
+        String nome3 = "Gustavo";
+        String teste = (nome.equals(nome3))?"Igual":"Diferente";
+        System.out.println("Nome dos usuários são iguais: " + teste);
     }
     
 }
