@@ -85,15 +85,17 @@ public class Fatorial extends javax.swing.JFrame {
 
     private void lblValorStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_lblValorStateChanged
         // TODO add your handling code here:
+        //variável
         int valor = Integer.parseInt(lblValor.getValue().toString());
         int a = valor;
+        //Lógica para o fatorial
         while (valor > 0){
             valor --;
             if(valor != 0 && valor != 1){
                 a *= (valor);
             }
-            
         }
+        //Mostrando o resultado no txt
         txtResultado.setText(Integer.toString(a));
     }//GEN-LAST:event_lblValorStateChanged
 
