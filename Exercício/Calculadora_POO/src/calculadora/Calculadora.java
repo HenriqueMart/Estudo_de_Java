@@ -19,6 +19,7 @@ public class Calculadora {
         // TODO code application logic here
         System.out.println("Bem vindo a Calculadora");
         Scanner teclado = new Scanner(System.in);
+        Operacao calculo = new Operacao();
         
         System.out.println("Digite o primeiro valor: ");
         double v1 = teclado.nextDouble();
@@ -28,14 +29,11 @@ public class Calculadora {
         
         
         System.out.println("Digite a operacação: ");
-        String simbolo = teclado.next();
+        String simbolo = teclado.next(); 
         
-        System.out.println("O valor escolhido foi de: " + v1 + " e " + v2 + ", A operacação escolhida foi " + simbolo);
-        Operacao calculo = new Operacao();
+        double resultado = calculo.simbolo(v1, v2, simbolo);
         
-        double resultado = calculo.escolha(v1, v2, simbolo);
-        
-        
+        System.out.println("O valor escolhido foi de: " + v1 + " e " + v2 + ", A operacação escolhida foi " + simbolo + ", Resultado: " + resultado);
     }
     
 }

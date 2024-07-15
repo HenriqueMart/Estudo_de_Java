@@ -9,35 +9,40 @@ package calculadora;
  * @author hmart
  */
 public class Operacao implements Calculo{
-    public double escolha(double valor1, double valor2, String simbolo){
+    double resultado;
+    public Operacao(){
+         resultado = 0;
+        }
         
+    
+           
+    public double simbolo(double valor1, double valor2, String simbolo){
         switch(simbolo){
             case "+":
-                double resultaod  = soma(valor1, valor2);
-            
+            resultado = soma(valor1, valor2);
+            break;
+
         }
         
         return resultado;
     }
-
     @Override
-    public double soma(double valor1, double valor2){
-        double resultado = valor1 + valor2;
-        return resultado;
+    public double soma(double v1, double v2){
+        return v1 + v2;
     }
 
     @Override
-    public double menos() {
+    public double menos(double v1, double v2) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public double multiplicar() {
+    public double multiplicar(double v1, double v2) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public double dividir() {
+    public double dividir(double v1, double v2) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
