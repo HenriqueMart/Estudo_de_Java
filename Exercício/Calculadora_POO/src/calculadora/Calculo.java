@@ -8,7 +8,7 @@ package calculadora;
  *
  * @author hmart
  */
-public abstract interface  Calculo {
+public interface  Calculo{
     double soma(double v1, double v2);
     double menos(double v1, double v2);
     double multiplicar(double v1, double v2);

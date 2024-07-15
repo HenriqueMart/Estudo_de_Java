@@ -8,14 +8,13 @@ package calculadora;
  *
  * @author hmart
  */
-public class Operacao implements Calculo{
+public class Operacao extends ModeloDeEntrada implements Calculo{
     double resultado;
-    public Operacao(){
-         resultado = 0;
-        }
-        
-    
-           
+
+    public Operacao(double v1, double v2) {
+        super(v1, v2);
+    }
+                  
     public double simbolo(double valor1, double valor2, String simbolo){
         switch(simbolo){
             case "+":
