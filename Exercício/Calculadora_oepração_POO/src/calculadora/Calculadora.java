@@ -17,25 +17,27 @@ public class Calculadora {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        double v1 = 0, v2 = 0;
+        Operacao calculo = new Operacao();
+        double resultado;
         System.out.println("Bem vindo a Calculadora");
         Scanner teclado = new Scanner(System.in);
-        Operacao calculo = new Operacao(v1, v2);
-        ModeloDeEntrada Entrada = new ModeloDeEntrada(v1, v2);
         
         System.out.println("Digite o primeiro valor: ");
-        Entrada.setV1(teclado.nextDouble());
+        double v1 = teclado.nextDouble();
         
         System.out.println("Digite o Segundo valor: ");
-        v2 = teclado.nextDouble();
+        double v2 = teclado.nextDouble();
         
         
         System.out.println("Digite a operacação: ");
-        String simbolo = teclado.next(); 
+        String simbolo = teclado.next();
         
-        double resultado = calculo.simbolo(v1, v2, simbolo);
+        resultado = calculo.escolha(v1, v2, simbolo);
+        System.out.println("O valor escolhido foi de: " + v1 + " e " + v2 + ", A operacação escolhida foi " + simbolo + ",Resultado = " + resultado);
         
-        System.out.println("O valor escolhido foi de: " + Entrada.getV1() + " e " + v2 + ", A operacação escolhida foi " + simbolo + ", Resultado: " + resultado);
+        
+        
+        
     }
     
 }
