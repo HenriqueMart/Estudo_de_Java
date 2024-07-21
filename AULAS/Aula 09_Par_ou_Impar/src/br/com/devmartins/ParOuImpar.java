@@ -14,6 +14,7 @@ public class ParOuImpar extends javax.swing.JFrame {
      * Creates new form ParOuImpar
      */
     public ParOuImpar() {
+        //Iniciando a tela
         initComponents();
     }
 
