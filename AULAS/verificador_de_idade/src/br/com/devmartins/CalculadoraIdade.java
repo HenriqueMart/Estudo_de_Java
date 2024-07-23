@@ -118,11 +118,14 @@ public class CalculadoraIdade extends javax.swing.JFrame {
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
         // TODO add your handling code here:
+        //Pegando o aano de nascimento
         int ano = Integer.parseInt(lblValor.getText());
+        //Realizando o cálculo do ano de nascimento - ano atual
         int idade = 2024 - ano;
         txtIdade.setText(Integer.toString(idade));
-        
+        //Verificação com o if caso ele tenha em torno de 16 a 18 ou seja maior que 70 anos para o voto ser opcional. 
         String sit = ((idade >= 16 && idade<18) && (idade >= 70))?"É OPCIONAL":"OBRIGATÓRIO";
+        //Escrever situação
         txtSituacao.setText(sit);
     }//GEN-LAST:event_btnCalcularActionPerformed
 
