@@ -15,6 +15,7 @@ public class Aula_12_3_repeticao {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        /*Realizando laço de repetição de 100 valores pulando 10*/
         for (int cc = 0; cc <100; cc += 10){
            System.out.println("Teste " + cc); 
         }
