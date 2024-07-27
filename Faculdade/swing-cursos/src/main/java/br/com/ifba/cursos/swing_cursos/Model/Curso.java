@@ -18,12 +18,12 @@ public class Curso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
     private String nome;
     private String codigoCurso;
     private boolean ativo;
 
     // Getters e Setters
+
     public Long getId() {
         return id;
     }
@@ -40,14 +40,6 @@ public class Curso {
         this.nome = nome;
     }
 
-    public String codigoCurso() {
-        return codigoCurso;
-    }
-
-    public void codigoCurso(String email) {
-        this.codigoCurso = codigoCurso;
-    }
-
     public String getCodigoCurso() {
         return codigoCurso;
     }
@@ -55,5 +47,12 @@ public class Curso {
     public void setCodigoCurso(String codigoCurso) {
         this.codigoCurso = codigoCurso;
     }
- 
+
+    public boolean isAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
+    }
 }
