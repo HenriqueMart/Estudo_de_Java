@@ -7,7 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SwingCursosApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SwingCursosApplication.class, args);
+		
+            ConfigurableapplicationContext context = new 
 	}
 
 }
