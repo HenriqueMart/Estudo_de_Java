@@ -4,7 +4,7 @@
  */
 package br.com.ifba.cursos.repository;
 
-import br.com.ifba.cursos.model.Curso;
+import br.com.ifba.cursos.entity.Curso;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
