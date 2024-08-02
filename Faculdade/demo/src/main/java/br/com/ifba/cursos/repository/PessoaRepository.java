@@ -4,13 +4,13 @@
  */
 package br.com.ifba.cursos.repository;
 
-import br.com.ifba.cursos.model.Pessoa;
+import br.com.ifba.cursos.model.Curso;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
  * @author hmart
  */
-public interface PessoaRepository extends JpaRepository<Pessoa, Long>{
+public interface PessoaRepository extends JpaRepository<Curso, Long>{
     
 }
